@@ -1,5 +1,2 @@
-﻿  ListOfBooks.cpp
-  Source.cpp
-  Generating Code...
-D:\College\Year_3\Algorithms & Data Structures\Week_8\Lab6\Lab6\ListOfBooks.cpp(116): warning C4715: 'ListOfBooks::deleteByIndex': not all control paths return a value
+﻿  Source.cpp
   Lab6.vcxproj -> D:\College\Year_3\Algorithms & Data Structures\Week_8\Lab6\Debug\Lab6.exe

@@ -32,7 +32,13 @@ int main() {
 
 	ListOfBooks list3 = list2;
 	std::cout << "displaying list 3" << std::endl;
-	list3.displayList();
+	std::cout << list3;
+	if (list3.findBook(11)) {
+		std::cout << "Book Found" << std::endl;
+	}
+	else {
+		std::cout << "Book not Found" << std::endl;
+	}
 
 	return 0;
 }

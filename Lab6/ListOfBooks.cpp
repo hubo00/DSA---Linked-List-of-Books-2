@@ -118,7 +118,7 @@ int ListOfBooks::deleteByIndex(int pos) {
 // insertFront() method which takes as parameters values for new Book objects, and inserts the object at the front of the list
 bool ListOfBooks::insertFront(int isbn, std::string title) {
 	bool finished = false;
-
+	
 	if (head) {
 		NodeOfBook* newNode = new NodeOfBook();
 		newNode->theBook.setIsbn(isbn);
@@ -165,6 +165,31 @@ bool ListOfBooks::deleteBook(int isbnToDelete) {
 		if (pointer != NULL) {
 			pointerBehind->next = pointer->next;
 			delete pointer;
+			finished = true;
+		}
+	}
+	else {
+		std::cout << "Array is empty" << std::endl;
+	}
+	return finished;
+}
+
+bool ListOfBooks::findBook(int isbn) {
+	bool finished = false;
+
+	if (head) {
+		NodeOfBook* pointer = head;
+		NodeOfBook* pointerBehind = nullptr;
+		if (head->theBook.getIsbn() == isbn) {
+			finished = true;
+		}
+		else {
+			while (pointer != NULL && pointer->theBook.getIsbn() != isbn) {
+				pointerBehind = pointer;
+				pointer = pointer->next;
+			}
+		}
+		if (pointer != NULL) {
 			finished = true;
 		}
 	}
