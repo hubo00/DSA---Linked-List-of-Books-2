@@ -1,3 +1,4 @@
+// Hubert Bukowski | x00161897
 #include "ListOfBooks.h"
 #include "NodeOfBook.h"
 #include <iostream>
